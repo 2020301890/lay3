@@ -7,44 +7,33 @@
     <style>
         header, nav, section, aside, footer {
             border: 1px solid black;
-            padding: 10px;
+            padding: 20px;
+            margin: 5px;
         }
         .container {
-            display: grid;
-            grid-template-areas:
-                "header header header"
-                "nav nav nav"
-                "aside main aside2"
-                "footer footer footer";
+            display: flex;
         }
-        header {
-            grid-area: header;
+        .side-content {
+            flex-basis: 30%; /* Adjust the width as needed */
         }
-        nav {
-            grid-area: nav;
-        }
-        aside {
-            grid-area: aside;
-        }
-        aside2 {
-            grid-area: aside2;
-        }
-        main {
-            grid-area: main;
-        }
-        footer {
-            grid-area: footer;
+        .main-content {
+            flex-grow: 1;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>Header</header>
-        <nav>Navigation Menu</nav>
-        <aside>Side Content</aside>
-        <main>Main Content</main>
-        <aside2>Side Content</aside2>
-        <footer>Footer</footer>
-    </div>
+
+<header>Header</header>
+
+<nav>Navigation Menu</nav>
+
+<div class="container">
+    <aside class="side-content">Side Content 1</aside>
+    <section class="main-content">Main Content</section>
+    <aside class="side-content">Side Content 2</aside>
+</div>
+
+<footer>Footer</footer>
+
 </body>
 </html>
