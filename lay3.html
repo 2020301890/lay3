@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Example</title>
+    <style>
+        header, nav, section, aside, footer {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "nav nav nav"
+                "aside main aside2"
+                "footer footer footer";
+        }
+        header {
+            grid-area: header;
+        }
+        nav {
+            grid-area: nav;
+        }
+        aside {
+            grid-area: aside;
+        }
+        aside2 {
+            grid-area: aside2;
+        }
+        main {
+            grid-area: main;
+        }
+        footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Header</header>
+        <nav>Navigation Menu</nav>
+        <aside>Side Content</aside>
+        <main>Main Content</main>
+        <aside2>Side Content</aside2>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>
